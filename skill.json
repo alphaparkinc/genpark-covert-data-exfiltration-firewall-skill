@@ -1,0 +1,37 @@
+{
+  "name": "genpark-covert-data-exfiltration-firewall-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Egress data exfiltration firewall detecting obfuscated credentials, private keys, and API tokens in outgoing network payloads.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agent-security",
+  "tags": [
+    "data-exfiltration",
+    "egress-firewall",
+    "secret-detection",
+    "dlp-guard",
+    "agent-security"
+  ],
+  "inputs": {
+    "destination_url": {
+      "type": "string",
+      "default": "https://external-webhook.io/collect"
+    }
+  },
+  "outputs": {
+    "firewall_id": {
+      "type": "string"
+    },
+    "exfiltration_detected": {
+      "type": "boolean"
+    },
+    "firewall_verdict": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
